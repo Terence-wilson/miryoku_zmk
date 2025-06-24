@@ -17,5 +17,27 @@
       flavor = "tap-preferred";
       bindings = <&mo>, <&kp>;
     };
+    u_mt_long: u_mt_long {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <U_TAPPING_TERM + 50>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+    u_mt_short: u_mt_short {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <U_TAPPING_TERM - 50>;
+      flavor = "tap-preferred";
+      bindings = <&kp>, <&kp>;
+    };
+    u_lt_dthold: u_lt_dthold {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <2>;
+      tapping-term-ms = <U_TAPPING_TERM>;
+      quick-tap-ms = <U_TAPPING_TERM>;
+      flavor = "tap-preferred";
+      bindings = <&mo>, <&kp>;
+    };
   };
 };
